@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes on calculus I — Gerard Puche Bonjorn</title>
+<meta name="description" content="Gerard Puche Bonjorn — math &amp; data science, ML for science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f3efe5;color:#1a1a1a;font:17px/1.75 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}*{box-sizing:border-box}a{color:#2b5cd6;text-decoration:none}a:hover{text-decoration:underline}@media (max-width:520px){main{padding:56px 20px 56px !important}}</style>
+</head>
+<body>
+<div style="min-height:100vh;background:#f3efe5;color:#1a1a1a">
+<main style="max-width:620px;margin:0 auto;padding:120px 24px 96px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:0 0 56px;font-size:.95rem">
+<a href="index.html" style="color:inherit;font-weight:600">Gerard Puche Bonjorn</a>
+<a href="notes.html">← notes</a>
+</div>
+<p style="margin:0 0 6px;color:#6b675e;font-size:.85rem;letter-spacing:.04em">oct 2026</p>
+<h1 style="font-size:1.6rem;font-weight:600;margin:0 0 36px;letter-spacing:-.015em;line-height:1.3">some advice and notes on calculus I courses</h1>
+
+<article style="display:flex;flex-direction:column;gap:22px;text-wrap:pretty">
+<p style="margin:0">calculus is an important course in STEM majors, truly important. even so, it tends to be boring: it is meant to give you tools, not for you to build intuition (I think at least most calc 1 courses have that focus, and intuition is built in others like linear algebra, discrete mathematics, etc.).</p>
+<p style="margin:0">I believe it is really important to get comfortable with derivatives and integrals (which are basically calculus itself), but maybe not always in the way most courses teach it. get comfortable with them fundamentally. get complete intuition for derivatives: they can be a rate of change, the dependence of a function on a certain variable, an expression defined as the limit</p>
+<div style="margin:0;padding:6px 0;text-align:center;font-family:'Latin Modern Math','STIX Two Math','Cambria Math',Georgia,serif;font-size:1.15rem;font-style:italic">f′(x<sub>0</sub>) = lim<sub style="font-style:normal">h→0</sub> &nbsp;<span style="display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center"><span style="border-bottom:1px solid currentColor;padding:0 4px">f(x<sub>0</sub> + h) − f(x<sub>0</sub>)</span><span>h</span></span></div>
+<p style="margin:0">etc. <br>the derivative is a <strong style="font-weight: 600;">linear operator</strong> (this is not mentioned a lot and it will be quite useful later), so we can take out scalars, we have linearity, and a bunch of nice properties. also, please see the chain rule with differential signs and not the function notation — it makes so much sense, and tracking the dependency is amazing (see Karpathy's micrograd videos).</p>
+<p style="margin:0">the integral is also a linear operator, and again this presents a lot of nice things: we can split it up into intervals, take out scalars, change the order of integration if we have several variables and differentials, put the derivative inside or outside the integral (crucial for Feynman's technique, differentiating under the integral sign). getting familiar with these two "things", which are operators, is important, and it is actually interesting viewed from this perspective (at least I think it is a bit more than learning the antiderivative of tan<sup>−1</sup>).</p>
+<p style="margin:0">also, do not practice integration by parts too much; it is quite boring. but do prove it, that part is nice. and learn to do it with the two columns and diagonals, not u and v. I made that mistake and had to re-learn it, it is so much better.</p>
+<p style="margin:0">all of this will help a lot. in later courses it is so nice to be comfortable with this. one example for me was fourier analysis, dealing with L<sup>2</sup> space and linear operators with complex numbers: the fact that the integral is linear is so convenient for taking the complex conjugate in and out and playing around with inner products easily.</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">on the tools</h2>
+<p style="margin:0">then there are the specific tools you learn. for me these were taylor series, integration techniques, convolution, the dirac delta function and fourier series (for calc 1), and the standard ℝ<sup>2</sup> multivariable calculus for calc 2. sometimes differential equations are also introduced (this was a whole course for me).</p>
+<p style="margin:0">some of these are important, others not so much. I haven't used taylor to solve limits in a while, but physicists probably use sin x ≈ x all the time, and they may not use the remainder formula for taylor series a lot — while for me, in numerical analysis, knowing how to bound it has been pretty much the general idea of the first few weeks (bounding error terms of other methods like newton's, but the fundamental idea is the same).</p>
+<p style="margin:0">try to understand them fundamentally and play with them, but it is okay not to fully understand one and simply mechanise it for the final. if you ever need it in the future, just learn it better then. (do not do this with the first part of what I mentioned.)</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">on differential equations</h2>
+<p style="margin:0">courses often just teach how to solve them systematically, which I think is actually sensible here, unlike the other cases above. but do learn what they fundamentally are, and visualise them in different ways — the best three for me: physics, maths, and a vector field that can be anything (like a relationship between species in an environment). if your course covers the laplace transform, understand that properly as well.</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">on resources</h2>
+<p style="margin:0">the recommended textbook is usually good if you study in english; if not, simply find a good textbook in english online. there are very famous ones, but I won't mention them since they cover a lot of material and you may want to focus on your course syllabus. I do recommend watching 3Blue1Brown and as many videos as you can get your hands on (Steve Burton is especially remarkable, and goes into a lot of depth).</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">on AI</h2>
+<p style="margin:0">my view on learning undergrad STEM with AI (as I do this myself) is quite direct: you should be able to digest and understand the concepts without it. past this point, use it as much as you want. talk to it for intuition, practice problems, a deep dive into some specific step you are not seeing, whatever you want.</p>
+</article>
+
+<nav style="display:flex;gap:18px;margin-top:56px;font-size:.95rem"><a href="index.html">Home</a><a href="notes.html">Notes</a><a href="https://x.com/gerardpbonjorn_">X</a></nav>
+<footer style="margin-top:64px;padding-top:16px;border-top:1px solid #e2dccd;color:#6b675e;font-size:.82rem">bay area / barcelona</footer>
+</main>
+</div>
+</body>
+</html>

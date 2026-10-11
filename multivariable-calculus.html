@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes on multivariable calculus — Gerard Puche Bonjorn</title>
+<meta name="description" content="Gerard Puche Bonjorn — math &amp; data science, ML for science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f3efe5;color:#1a1a1a;font:17px/1.75 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}*{box-sizing:border-box}a{color:#2b5cd6;text-decoration:none}a:hover{text-decoration:underline}@media (max-width:520px){main{padding:56px 20px 56px !important}}</style>
+</head>
+<body>
+<div style="min-height:100vh;background:#f3efe5;color:#1a1a1a">
+<main style="max-width:620px;margin:0 auto;padding:120px 24px 96px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:0 0 56px;font-size:.95rem">
+<a href="index.html" style="color:inherit;font-weight:600">Gerard Puche Bonjorn</a>
+<a href="notes.html">← notes</a>
+</div>
+<p style="margin:0 0 6px;color:#6b675e;font-size:.85rem;letter-spacing:.04em">oct 2026</p>
+<h1 style="font-size:1.6rem;font-weight:600;margin:0 0 36px;letter-spacing:-.015em;line-height:1.3">notes on multivariable calculus</h1>
+
+<article style="display:flex;flex-direction:column;gap:22px;text-wrap:pretty">
+<p style="margin:0">multivariable calculus felt very different to me from calculus I (I call it multivariable to avoid confusion, but at least in europe calc 2 is basically multivariable calc). it felt a lot more conceptual: I could use my imagination and intuition much more than in calculus I.</p>
+<p style="margin:0">one instance of this is the visual approach to lagrange multipliers, where you can see how the constraint curve and the level curves meet, and therefore why the gradients need to be proportional at the optimum.</p>
+<figure style="margin:4px 0;display:flex;flex-direction:column;gap:8px"><svg viewBox="0 0 560 300" style="width:100%;height:auto;display:block" font-family="Inter,system-ui,sans-serif" font-size="13">
+<defs><marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2b5cd6"></path></marker><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1a1a1a"></path></marker></defs>
+<line x1="203.6" y1="150" x2="501.2" y2="150" stroke="#6b675e"></line><line x1="340" y1="286.4" x2="340" y2="13.6" stroke="#6b675e"></line>
+<text x="507.2" y="154" fill="#6b675e" font-style="italic">x</text><text x="346" y="17.6" fill="#6b675e" font-style="italic">y</text>
+<circle cx="340" cy="150" r="31" fill="none" stroke="#cfc7b4" stroke-width="1.2"></circle>
+<circle cx="340" cy="150" r="62" fill="none" stroke="#cfc7b4" stroke-width="1.2"></circle>
+<circle cx="340" cy="150" r="87.7" fill="none" stroke="#1a1a1a" stroke-width="1.6"></circle>
+<circle cx="340" cy="150" r="120.9" fill="none" stroke="#cfc7b4" stroke-width="1.2"></circle>
+<line x1="321.4" y1="7.4" x2="482.6" y2="168.6" stroke="#2b5cd6" stroke-width="2"></line>
+<line x1="402" y1="88" x2="439.2" y2="50.8" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#ah2)"></line>
+<line x1="402" y1="88" x2="420.6" y2="69.4" stroke="#2b5cd6" stroke-width="2.4" marker-end="url(#ah1)"></line>
+<circle cx="402" cy="88" r="4" fill="#1a1a1a"></circle>
+<text x="447.2" y="50.8" fill="#1a1a1a">∇f</text>
+<text x="430.6" y="83.4" fill="#2b5cd6">∇g</text>
+<text x="470.2" y="172.6" fill="#2b5cd6">g = 0</text>
+<text x="20" y="40" fill="#1a1a1a" font-size="14" font-style="italic">∇f = λ ∇g</text>
+<text x="20" y="62" fill="#6b675e" font-size="12">f = x² + y² (a paraboloid)</text><text x="20" y="78" fill="#6b675e" font-size="12">has circles as level curves.</text><text x="20" y="100" fill="#6b675e" font-size="12">the smallest circle that</text><text x="20" y="116" fill="#6b675e" font-size="12">reaches the constraint</text><text x="20" y="132" fill="#6b675e" font-size="12">touches it tangentially.</text>
+</svg><figcaption style="color:#6b675e;font-size:.85rem;text-wrap:pretty">minimising f = x² + y² along the line x + y = 2. the circle of radius √2 touches the line at (1, 1), where the gradients line up.</figcaption></figure>
+<p style="margin:0">there are a ton of examples: the jacobian when you change coordinates, because the little squares change in size; thinking about how to parametrise spirals or cylinders; etc. it is all quite accessible to deduce yourself if you think about it carefully, and it is indeed beautiful.</p>
+<figure style="margin:4px 0;display:flex;flex-direction:column;gap:8px"><svg viewBox="0 0 560 270" style="width:100%;height:auto;display:block" font-family="Inter,system-ui,sans-serif" font-size="13">
+<defs><marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b675e"></path></marker></defs>
+<rect x="60" y="110" width="40" height="40" fill="#2b5cd6" fill-opacity="0.22"></rect>
+<rect x="180" y="110" width="40" height="40" fill="#2b5cd6" fill-opacity="0.22"></rect>
+<line x1="20" y1="30" x2="20" y2="230" stroke="#cfc7b4"></line><line x1="20" y1="30" x2="220" y2="30" stroke="#cfc7b4"></line>
+<line x1="60" y1="30" x2="60" y2="230" stroke="#cfc7b4"></line><line x1="20" y1="70" x2="220" y2="70" stroke="#cfc7b4"></line>
+<line x1="100" y1="30" x2="100" y2="230" stroke="#cfc7b4"></line><line x1="20" y1="110" x2="220" y2="110" stroke="#cfc7b4"></line>
+<line x1="140" y1="30" x2="140" y2="230" stroke="#cfc7b4"></line><line x1="20" y1="150" x2="220" y2="150" stroke="#cfc7b4"></line>
+<line x1="180" y1="30" x2="180" y2="230" stroke="#cfc7b4"></line><line x1="20" y1="190" x2="220" y2="190" stroke="#cfc7b4"></line>
+<line x1="220" y1="30" x2="220" y2="230" stroke="#cfc7b4"></line><line x1="20" y1="230" x2="220" y2="230" stroke="#cfc7b4"></line>
+<text x="120" y="252" text-anchor="middle" fill="#6b675e" font-style="italic">r</text><text x="10" y="130" text-anchor="middle" fill="#6b675e" font-style="italic">θ</text>
+<text x="120" y="18" text-anchor="middle" fill="#1a1a1a">equal squares in (r, θ)</text>
+<line x1="238" y1="130" x2="288" y2="130" stroke="#6b675e" stroke-width="1.4" marker-end="url(#ah3)"></line>
+<path d="M342,206.7 L374,183.5 A79.2 79.2 0 0 0 356.5,166 L333.3,198 A39.6 39.6 0 0 1 342,206.7Z" fill="#2b5cd6" fill-opacity="0.22"></path>
+<path d="M438.2,136.9 L470.2,113.6 A198 198 0 0 0 426.4,69.8 L403.1,101.9 A158.4 158.4 0 0 1 438.2,136.9Z" fill="#2b5cd6" fill-opacity="0.22"></path>
+<path d="M349.6,230 A39.6 39.6 0 0 0 310,190.4" fill="none" stroke="#cfc7b4"></path>
+<path d="M389.2,230 A79.2 79.2 0 0 0 310,150.8" fill="none" stroke="#cfc7b4"></path>
+<path d="M428.8,230 A118.8 118.8 0 0 0 310,111.2" fill="none" stroke="#cfc7b4"></path>
+<path d="M468.4,230 A158.4 158.4 0 0 0 310,71.6" fill="none" stroke="#cfc7b4"></path>
+<path d="M508,230 A198 198 0 0 0 310,32" fill="none" stroke="#cfc7b4"></path>
+<line x1="310" y1="230" x2="508" y2="230" stroke="#cfc7b4"></line>
+<line x1="310" y1="230" x2="498.3" y2="168.8" stroke="#cfc7b4"></line>
+<line x1="310" y1="230" x2="470.2" y2="113.6" stroke="#cfc7b4"></line>
+<line x1="310" y1="230" x2="426.4" y2="69.8" stroke="#cfc7b4"></line>
+<line x1="310" y1="230" x2="371.2" y2="41.7" stroke="#cfc7b4"></line>
+<line x1="310" y1="230" x2="310" y2="32" stroke="#cfc7b4"></line>
+<text x="420" y="18" text-anchor="middle" fill="#1a1a1a">become cells of different sizes in (x, y)</text>
+<text x="508" y="252" text-anchor="end" fill="#1a1a1a" font-style="italic">dA = r dr dθ</text>
+</svg><figcaption style="color:#6b675e;font-size:.85rem;text-wrap:pretty">polar coordinates: the same dr dθ square covers more area further from the origin, which is the factor r.</figcaption></figure>
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">going deeper</h2>
+<p style="margin:0">all of vector calculus is also super nice to learn: green's, stokes' and gauss's theorems. Steve Burton's videos on these are amazing and give you a sharp understanding.</p>
+<p style="margin:0">it is also a great moment to learn gradient descent if you are interested (my university course covered it), as it is literally optimising a multivariable function. you'll see very clearly why the learning rate matters, why you can get stuck in local minima, and all the intuition behind it.</p>
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">on the tools</h2>
+<p style="margin:0">other than this, it is important to get comfortable with other coordinate systems, especially polar and cylindrical, and to be flexible with changing the order of integration, changing differentials and parametrising. basically what you did in calculus I (get cracked at the tools), but now with more variables and new tools.</p>
+</article>
+
+<nav style="display:flex;gap:18px;margin-top:56px;font-size:.95rem"><a href="index.html">Home</a><a href="notes.html">Notes</a><a href="https://x.com/gerardpbonjorn_">X</a></nav>
+<footer style="margin-top:64px;padding-top:16px;border-top:1px solid #e2dccd;color:#6b675e;font-size:.82rem">bay area / barcelona</footer>
+</main>
+</div>
+</body>
+</html>
