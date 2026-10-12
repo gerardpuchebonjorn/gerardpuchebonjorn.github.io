@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes on discrete mathematics — Gerard Puche Bonjorn</title>
+<meta name="description" content="Gerard Puche Bonjorn — math &amp; data science, ML for science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f3efe5;color:#1a1a1a;font:17px/1.75 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}*{box-sizing:border-box}a{color:#2b5cd6;text-decoration:none}a:hover{text-decoration:underline}@media (max-width:520px){main{padding:56px 20px 56px !important}}</style>
+</head>
+<body>
+<div style="min-height:100vh;background:#f3efe5;color:#1a1a1a">
+<main style="max-width:620px;margin:0 auto;padding:120px 24px 96px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:0 0 56px;font-size:.95rem">
+<a href="index.html" style="color:inherit;font-weight:600">Gerard Puche Bonjorn</a>
+<a href="notes.html">← notes</a>
+</div>
+<p style="margin:0 0 6px;color:#6b675e;font-size:.85rem;letter-spacing:.04em">oct 2026</p>
+<h1 style="font-size:1.6rem;font-weight:600;margin:0 0 36px;letter-spacing:-.015em;line-height:1.3">notes on discrete mathematics</h1>
+
+<article style="display:flex;flex-direction:column;gap:22px;text-wrap:pretty">
+<p style="margin:0">discrete mathematics has been my favourite course so far. it really teaches you to think and lets you simply imagine and figure things out. the other day I rushed a bit through a midterm dealing with an inner product space in L<sup>2</sup> where the integral was a bit messy, and I lost a lot of time simply on the computations. discrete maths gets rid of all that: propositional logic, predicate logic, modular arithmetic, combinatorics and especially graph theory (my favourite part) don’t have much of that at the undergrad level, so you are left simply with some rules and a game to play, trying to prove something or find a clever counterexample.</p>
+<p style="margin:0">discrete maths will probably not be very useful for the tools it gives you (you won’t have to prove things about graphs or propositional logic again), but it does give you an amazing structure for how to solve problems and how to get better at doing so.</p>
+<p style="margin:0">I vividly remember getting every graph problem wrong in my problem sheets. each one had a different twist, and graphs were pretty new (at least for me; high school had no discrete maths), so it forces you to really get comfortable with new objects and to build a really clear structure for proving things: matching terms, contradiction, contrapositive, etc.</p>
+<p style="margin:0">one of my favourites:</p>
+<figure style="margin:4px 0;display:flex;flex-direction:column;gap:8px"><svg viewBox="0 0 560 320" style="width:100%;height:auto;display:block" font-family="Inter,system-ui,sans-serif" font-size="13">
+<line x1="140" y1="68" x2="235.1" y2="137.1" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="140" y1="68" x2="140" y2="120" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="140" y1="120" x2="168.2" y2="206.8" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="235.1" y1="137.1" x2="198.8" y2="248.9" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="235.1" y1="137.1" x2="185.7" y2="153.2" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="185.7" y1="153.2" x2="111.8" y2="206.8" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="198.8" y1="248.9" x2="81.2" y2="248.9" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="198.8" y1="248.9" x2="168.2" y2="206.8" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="168.2" y1="206.8" x2="94.3" y2="153.2" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="81.2" y1="248.9" x2="44.9" y2="137.1" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="81.2" y1="248.9" x2="111.8" y2="206.8" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="111.8" y1="206.8" x2="140" y2="120" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="44.9" y1="137.1" x2="140" y2="68" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="44.9" y1="137.1" x2="94.3" y2="153.2" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="94.3" y1="153.2" x2="185.7" y2="153.2" stroke="#1a1a1a" stroke-width="1.3"></line><circle cx="140" cy="68" r="9" fill="oklch(0.55 0.15 260)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="235.1" cy="137.1" r="9" fill="oklch(0.55 0.15 30)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="198.8" cy="248.9" r="9" fill="oklch(0.55 0.15 260)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="81.2" cy="248.9" r="9" fill="oklch(0.55 0.15 30)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="44.9" cy="137.1" r="9" fill="oklch(0.55 0.15 150)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="140" cy="120" r="9" fill="oklch(0.55 0.15 30)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="185.7" cy="153.2" r="9" fill="oklch(0.55 0.15 260)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="168.2" cy="206.8" r="9" fill="oklch(0.55 0.15 150)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="111.8" cy="206.8" r="9" fill="oklch(0.55 0.15 150)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="94.3" cy="153.2" r="9" fill="oklch(0.55 0.15 30)" stroke="#f3efe5" stroke-width="2"></circle>
+<text x="140" y="30" text-anchor="middle" fill="#1a1a1a">the petersen graph, 3 colours</text>
+<text x="140" y="300" text-anchor="middle" fill="#6b675e" font-size="12">no edge joins two of the same colour</text>
+<line x1="290" y1="40" x2="290" y2="290" stroke="#e2dccd"></line>
+<line x1="340" y1="250" x2="350" y2="120" stroke="#cfc7b4" stroke-width="1.3"></line><line x1="500" y1="250" x2="490" y2="120" stroke="#cfc7b4" stroke-width="1.3"></line><line x1="340" y1="250" x2="420" y2="270" stroke="#cfc7b4" stroke-width="1.3"></line><circle cx="340" cy="250" r="7" fill="#f3efe5" stroke="#cfc7b4" stroke-width="1.4"></circle><circle cx="500" cy="250" r="7" fill="#f3efe5" stroke="#cfc7b4" stroke-width="1.4"></circle><line x1="420" y1="190" x2="350" y2="120" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="420" y1="190" x2="490" y2="120" stroke="#1a1a1a" stroke-width="1.3"></line><line x1="420" y1="190" x2="420" y2="270" stroke="#1a1a1a" stroke-width="1.3"></line><circle cx="350" cy="120" r="9" fill="oklch(0.55 0.15 260)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="490" cy="120" r="9" fill="oklch(0.55 0.15 30)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="420" cy="270" r="9" fill="oklch(0.55 0.15 150)" stroke="#f3efe5" stroke-width="2"></circle><circle cx="420" cy="190" r="11" fill="#f3efe5" stroke="#1a1a1a" stroke-width="1.6" stroke-dasharray="3 3"></circle><text x="438" y="195" fill="#1a1a1a" font-style="italic">v</text>
+<text x="425" y="30" text-anchor="middle" fill="#1a1a1a">greedy: colour one vertex at a time</text>
+<rect x="372" y="52" width="18" height="18" rx="3" fill="oklch(0.55 0.15 260)" stroke="oklch(0.55 0.15 260)" stroke-width="0" opacity="0.35"></rect><rect x="400" y="52" width="18" height="18" rx="3" fill="oklch(0.55 0.15 30)" stroke="oklch(0.55 0.15 30)" stroke-width="0" opacity="0.35"></rect><rect x="428" y="52" width="18" height="18" rx="3" fill="oklch(0.55 0.15 150)" stroke="oklch(0.55 0.15 150)" stroke-width="0" opacity="0.35"></rect><rect x="456" y="52" width="18" height="18" rx="3" fill="#f3efe5" stroke="oklch(0.55 0.15 330)" stroke-width="2" opacity="1"></rect><text x="482" y="66" fill="oklch(0.55 0.15 330)" font-size="12">free</text>
+<text x="425" y="300" text-anchor="middle" fill="#6b675e" font-size="12">3 neighbours block at most 3 of 4 colours</text>
+</svg></figure>
+<div style="display:flex;flex-direction:column;gap:10px;padding:18px 0;border-top:1px solid #e2dccd;border-bottom:1px solid #e2dccd">
+<p style="margin:0"><span style="font-weight:600">claim.</span> if every vertex of a graph has at most Δ neighbours, the graph can be coloured with Δ + 1 colours so that no edge joins two vertices of the same colour.</p>
+<p style="margin:0"><span style="font-weight:600">proof.</span> colour the vertices one at a time, in any order. when you reach a vertex v, at most Δ of its neighbours are already coloured, so they use at most Δ of the Δ + 1 colours. at least one colour is left; give it to v. no step ever gets stuck, so every vertex gets a colour. ∎</p>
+<p style="margin:0;color:#6b675e;font-size:.95rem">the bound is not always tight: the petersen graph has Δ = 3, so the proof promises 4 colours, but 3 are enough. brooks’ theorem says exactly when you can save that extra colour.</p>
+</div>
+<p style="margin:0">as I mentioned at the beginning, most of the work is the idea. once you have it, sometimes the proof is 5–15 lines, which is beautiful in my opinion.</p>
+<p style="margin:0">for discrete maths, I don’t think it is as important to find the perfect textbook, professor or explainer. the rules are usually a few things you can learn quickly, and all the magic is in cracking your brain on a problem for a long time. so my only recommendation is to get a blank piece of paper and stare at problems regularly.</p>
+</article>
+
+<nav style="display:flex;gap:18px;margin-top:56px;font-size:.95rem"><a href="index.html">Home</a><a href="notes.html">Notes</a><a href="https://x.com/gerardpbonjorn_">X</a></nav>
+<footer style="margin-top:64px;padding-top:16px;border-top:1px solid #e2dccd;color:#6b675e;font-size:.82rem">bay area / barcelona</footer>
+</main>
+</div>
+</body>
+</html>
