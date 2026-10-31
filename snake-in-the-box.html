@@ -7,7 +7,7 @@
 <meta name="description" content="The snake-in-the-box problem explained from zero: hypercubes, what a snake is, why the longest one is hard to find, and the known record lengths.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<style>body{margin:0;background:#f3efe5;color:#1a1a1a;font:17px/1.75 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}*{box-sizing:border-box}a{color:#2b5cd6;text-decoration:none}a:hover{text-decoration:underline}figure{margin:4px 0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}figure img,figure object,figure svg{max-width:100%;height:auto;display:block}figcaption{color:#6b675e;font-size:.85rem;text-wrap:pretty;max-width:520px}table.records{border-collapse:collapse;font-size:.95rem;margin:4px 0;max-width:420px}table.records th,table.records td{padding:6px 14px 6px 0;text-align:left;border-bottom:1px solid #e2dccd}table.records th{color:#6b675e;font-weight:500;font-size:.85rem}table.records td.num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem}@media (max-width:520px){main{padding:56px 20px 56px !important}}</style>
+<style>body{margin:0;background:#f3efe5;color:#1a1a1a;font:17px/1.75 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}*{box-sizing:border-box}a{color:#2b5cd6;text-decoration:none}a:hover{text-decoration:underline}figure{margin:4px 0;display:flex;flex-direction:column;gap:8px;align-items:stretch;width:100%}figure img,figure object,figure svg{width:100%;max-width:100%;height:auto;display:block;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px}figcaption{color:#6b675e;font-size:.85rem;text-wrap:pretty;width:100%}table.records{border-collapse:collapse;font-size:.95rem;margin:4px 0;max-width:420px}table.records th,table.records td{padding:6px 14px 6px 0;text-align:left;border-bottom:1px solid #e2dccd}table.records th{color:#6b675e;font-weight:500;font-size:.85rem}table.records td.num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem}@media (max-width:520px){main{padding:56px 20px 56px !important}}</style>
 <link rel="canonical" href="https://gerardpuchebonjorn.github.io/snake-in-the-box.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Gerard Puche Bonjorn">
@@ -40,14 +40,14 @@
 <p style="margin:0">Do it again: take two squares and connect matching corners. You get an ordinary cube, eight corners, each labelled with three bits.</p>
 
 <figure>
-<img src="snake-img/hypercubes.svg" alt="A line, a square and a cube, with corners labelled by binary strings" width="660" height="300" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<img src="snake-img/hypercubes.svg" alt="A line, a square and a cube, with corners labelled by binary strings" width="620" height="300">
 <figcaption>Building up. An edge always means “flip exactly one bit”.</figcaption>
 </figure>
 
 <p style="margin:0">Once more and you get a 4-dimensional cube (a tesseract): sixteen corners, each a string of four bits. You can picture it as two ordinary cubes, with every corner of the first joined to the matching corner of the second.</p>
 
 <figure>
-<img src="snake-img/hypercube4.svg" alt="A 4D hypercube drawn as two cubes linked by edges that flip the fourth bit" width="640" height="300" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<img src="snake-img/hypercube4.svg" alt="A 4D hypercube drawn as two cubes linked by edges that flip the fourth bit" width="620" height="300">
 <figcaption>n = 4. The dashed blue lines are the new edges: flip the fourth bit.</figcaption>
 </figure>
 
@@ -64,28 +64,28 @@
 <p style="margin:0">On the square the longest possible snake has length 2. Here is one:</p>
 
 <figure>
-<img src="snake-img/square-snake.svg" alt="A valid snake of length 2 on the square: 00 to 10 to 11" width="420" height="300" style="width:100%;max-width:420px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<img src="snake-img/square-snake.svg" alt="A valid snake of length 2 on the square: 00 to 10 to 11" width="620" height="300">
 <figcaption>00 → 10 → 11. The unused corner 01 is adjacent to both ends, so we cannot visit it without creating a shortcut.</figcaption>
 </figure>
 
 <p style="margin:0">If we try to keep going around the square, we break the rule:</p>
 
 <figure>
-<img src="snake-img/square-invalid.svg" alt="An invalid path on the square that creates a forbidden chord" width="420" height="300" style="width:100%;max-width:420px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<img src="snake-img/square-invalid.svg" alt="An invalid path on the square that creates a forbidden chord" width="620" height="300">
 <figcaption>00 → 10 → 11 → 01 looks fine step by step, but 00 and 01 are neighbours and not consecutive on the path. That red dashed edge is a forbidden chord. Not a snake.</figcaption>
 </figure>
 
 <p style="margin:0">On the ordinary cube the longest snake has length 4. One example:</p>
 
 <figure>
-<img src="snake-img/cube-snake.svg" alt="A valid longest snake of length 4 on the 3D cube" width="620" height="340" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<img src="snake-img/cube-snake.svg" alt="A valid longest snake of length 4 on the 3D cube" width="620" height="340">
 <figcaption>000 → 001 → 011 → 111 → 110. Check any two non-consecutive corners: they always differ in at least two bits, so they are not neighbours.</figcaption>
 </figure>
 
 <p style="margin:0">Walk a whole face of the cube instead, and you get the same failure as on the square:</p>
 
 <figure>
-<img src="snake-img/cube-invalid.svg" alt="An invalid path on the cube that walks around a face" width="620" height="340" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<img src="snake-img/cube-invalid.svg" alt="An invalid path on the cube that walks around a face" width="620" height="340">
 <figcaption>000 → 001 → 011 → 010. The start and the end share an edge of the cube. Chord. Not a snake.</figcaption>
 </figure>
 
