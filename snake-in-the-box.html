@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the snake-in-the-box problem · Gerard Puche Bonjorn</title>
+<meta name="description" content="The snake-in-the-box problem explained from zero: hypercubes, what a snake is, why the longest one is hard to find, and the known record lengths.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#f3efe5;color:#1a1a1a;font:17px/1.75 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}*{box-sizing:border-box}a{color:#2b5cd6;text-decoration:none}a:hover{text-decoration:underline}figure{margin:4px 0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}figure img,figure object,figure svg{max-width:100%;height:auto;display:block}figcaption{color:#6b675e;font-size:.85rem;text-wrap:pretty;max-width:520px}table.records{border-collapse:collapse;font-size:.95rem;margin:4px 0;max-width:420px}table.records th,table.records td{padding:6px 14px 6px 0;text-align:left;border-bottom:1px solid #e2dccd}table.records th{color:#6b675e;font-weight:500;font-size:.85rem}table.records td.num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem}@media (max-width:520px){main{padding:56px 20px 56px !important}}</style>
+<link rel="canonical" href="https://gerardpuchebonjorn.github.io/snake-in-the-box.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gerard Puche Bonjorn">
+<meta property="og:title" content="the snake-in-the-box problem · Gerard Puche Bonjorn">
+<meta property="og:description" content="The snake-in-the-box problem explained from zero: hypercubes, what a snake is, why the longest one is hard to find, and the known record lengths.">
+<meta property="og:url" content="https://gerardpuchebonjorn.github.io/snake-in-the-box.html">
+<meta property="og:image" content="https://gerardpuchebonjorn.github.io/photo.jpg">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<div style="min-height:100vh;background:#f3efe5;color:#1a1a1a">
+<main style="max-width:620px;margin:0 auto;padding:120px 24px 96px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:0 0 56px;font-size:.95rem">
+<a href="index.html" style="color:inherit;font-weight:600">Gerard Puche Bonjorn</a>
+<a href="notes.html">← notes</a>
+</div>
+<p style="margin:0 0 6px;color:#6b675e;font-size:.85rem;letter-spacing:.04em">oct 2026</p>
+<h1 style="font-size:1.6rem;font-weight:600;margin:0 0 36px;letter-spacing:-.015em;line-height:1.3">the snake-in-the-box problem</h1>
+
+<article style="display:flex;flex-direction:column;gap:22px;text-wrap:pretty">
+
+<p style="margin:0">There is a puzzle that has been open for almost seventy years, about drawing the longest possible “snake” inside a cube that lives in more and more dimensions. It sounds like a game. It is also a real research problem, and people still break records on it. This note is just the problem itself, explained from zero.</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">cubes, but higher</h2>
+
+<p style="margin:0">Start with a line segment. It has two endpoints. Call those endpoints <span style="font-family:ui-monospace,Menlo,monospace;font-size:15px">0</span> and <span style="font-family:ui-monospace,Menlo,monospace;font-size:15px">1</span>. That is a 1-dimensional cube.</p>
+
+<p style="margin:0">Take two copies of that line and connect matching ends. You get a square: four corners. Label each corner with two bits, one for “left/right” and one for “bottom/top”. Neighbouring corners differ in exactly one bit.</p>
+
+<p style="margin:0">Do it again: take two squares and connect matching corners. You get an ordinary cube, eight corners, each labelled with three bits.</p>
+
+<figure>
+<img src="snake-img/hypercubes.svg" alt="A line, a square and a cube, with corners labelled by binary strings" width="620" height="248" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<figcaption>Building up. An edge always means “flip exactly one bit”.</figcaption>
+</figure>
+
+<p style="margin:0">Once more and you get a 4-dimensional cube (a tesseract): sixteen corners, each a string of four bits. You can picture it as two ordinary cubes, with every corner of the first joined to the matching corner of the second.</p>
+
+<figure>
+<img src="snake-img/hypercube4.svg" alt="A 4D hypercube drawn as two cubes linked by edges that flip the fourth bit" width="620" height="268" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<figcaption>n = 4. The dashed blue lines are the new edges: flip the fourth bit.</figcaption>
+</figure>
+
+<p style="margin:0">In general, the <b>n-dimensional hypercube</b> has a corner for every binary string of length n, so 2<sup>n</sup> corners, and an edge between any two strings that differ in exactly one position. So a 10-dimensional hypercube already has 1,024 corners; a 20-dimensional one has about a million.</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">what is a snake?</h2>
+
+<p style="margin:0">A <b>snake</b> is a path that walks from corner to corner along the edges, with one extra rule:</p>
+
+<p style="margin:0">no two corners on the path are allowed to be neighbours, unless they are next to each other on the path.</p>
+
+<p style="margin:0">In other words: the snake cannot “see” itself across a shortcut. If you have already visited a corner, you may not later step on anything adjacent to it, except by continuing from the tip. The length of a snake is the number of steps (edges) it takes.</p>
+
+<p style="margin:0">On the square the longest possible snake has length 2. Here is one:</p>
+
+<figure>
+<img src="snake-img/square-snake.svg" alt="A valid snake of length 2 on the square: 00 to 10 to 11" width="400" height="252" style="width:100%;max-width:400px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<figcaption>00 → 10 → 11. The unused corner 01 is adjacent to both ends, so we cannot visit it without creating a shortcut.</figcaption>
+</figure>
+
+<p style="margin:0">If we try to keep going around the square, we break the rule:</p>
+
+<figure>
+<img src="snake-img/square-invalid.svg" alt="An invalid path on the square that creates a forbidden chord" width="400" height="252" style="width:100%;max-width:400px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<figcaption>00 → 10 → 11 → 01 looks fine step by step, but 00 and 01 are neighbours and not consecutive on the path. That red dashed edge is a forbidden chord. Not a snake.</figcaption>
+</figure>
+
+<p style="margin:0">On the ordinary cube the longest snake has length 4. One example:</p>
+
+<figure>
+<img src="snake-img/cube-snake.svg" alt="A valid longest snake of length 4 on the 3D cube" width="600" height="288" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<figcaption>000 → 001 → 011 → 111 → 110. Check any two non-consecutive corners: they always differ in at least two bits, so they are not neighbours.</figcaption>
+</figure>
+
+<p style="margin:0">Walk a whole face of the cube instead, and you get the same failure as on the square:</p>
+
+<figure>
+<img src="snake-img/cube-invalid.svg" alt="An invalid path on the cube that walks around a face" width="600" height="288" style="width:100%;max-width:520px;height:auto;background:#fbf9f3;border:1px solid #e2dccd;border-radius:8px">
+<figcaption>000 → 001 → 011 → 010. The start and the end share an edge of the cube. Chord. Not a snake.</figcaption>
+</figure>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">the question</h2>
+
+<p style="margin:0">For each dimension n, what is the length of the longest possible snake in the n-cube?</p>
+
+<p style="margin:0">That number is usually written a(n). We know it exactly only up to n = 8. From n = 9 onwards we only know lower bounds: “we have found a snake this long, and maybe a longer one exists.”</p>
+
+<figure>
+<table class="records">
+<thead><tr><th>dimension n</th><th>longest snake</th><th></th></tr></thead>
+<tbody>
+<tr><td>1</td><td class="num">1</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>2</td><td class="num">2</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>3</td><td class="num">4</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>4</td><td class="num">7</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>5</td><td class="num">13</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>6</td><td class="num">26</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>7</td><td class="num">50</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>8</td><td class="num">98</td><td style="color:#6b675e;font-size:.85rem">exact</td></tr>
+<tr><td>9</td><td class="num">≥ 191</td><td style="color:#6b675e;font-size:.85rem">record</td></tr>
+<tr><td>10</td><td class="num">≥ 379</td><td style="color:#6b675e;font-size:.85rem">record</td></tr>
+<tr><td>11</td><td class="num">≥ 750</td><td style="color:#6b675e;font-size:.85rem">record</td></tr>
+<tr><td>12</td><td class="num">≥ 1480</td><td style="color:#6b675e;font-size:.85rem">record</td></tr>
+<tr><td>13</td><td class="num">≥ 2946</td><td style="color:#6b675e;font-size:.85rem">record</td></tr>
+</tbody>
+</table>
+<figcaption>Exact values for n ≤ 8 (Östergård &amp; Pettersson and earlier). From n = 9, best known lower bounds as listed by <a href="https://minortriad.com/snake/">Ace</a>; the jump of a(9) to 191 (after 190 held for about fourteen years) is from Orland, Fagan et al., <a href="https://arxiv.org/abs/2607.15270">arXiv:2607.15270</a>.</figcaption>
+</figure>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">why it is hard</h2>
+
+<p style="margin:0">The n-cube has 2<sup>n</sup> corners. At every step of a snake the next move has to be a bit-flip that does not land on, or next to, any corner you already used (except the current tip). The number of paths to check grows brutally with n. Exhaustive computer search has settled n ≤ 8; past that, people invent clever searches and constructions, and the record table above is the best anyone has published so far.</p>
+
+<p style="margin:0">A quick sense of scale: the 8-cube has 256 corners and the longest snake takes 98 steps. The 13-cube has 8,192 corners, and the best known snake takes 2,946 steps. Nobody knows if that is optimal.</p>
+
+<h2 style="font-size:.85rem;font-weight:500;color:#6b675e;margin:20px 0 -10px;letter-spacing:.04em">why people care</h2>
+
+<p style="margin:0">Kautz introduced the problem in 1958 while studying codes that can detect a single-bit error. The idea, roughly: list the codewords in the order of a snake. Because consecutive codewords differ by one bit, and non-consecutive ones differ by at least two, a single flipped bit in transmission either lands on the next codeword or on something that is not a codeword at all — so you notice. Longer snakes give longer such codes. The same objects show up in a few other corners of coding and digital communication; for this note, the puzzle on its own is enough.</p>
+
+<p style="margin:0">Next: how a Caltech Math-AI group used reinforcement learning (a method they call Beam Anchor) to push several of the records above.</p>
+
+</article>
+</main>
+</div>
+</body>
+</html>
