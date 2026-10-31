@@ -1,5 +1,5 @@
 <svg viewBox="0 0 620 340" role="img" aria-label="An invalid path on the cube that walks around a face and creates a chord" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#1a1a1a">
-<text x="310" y="26" text-anchor="middle" font-weight="600" font-size="13">not a snake: walking a whole face</text>
+<text x="310.0" y="26" text-anchor="middle" font-weight="600" font-size="13">not a snake: walking a whole face</text>
 <line x1="214.0" y1="251.5" x2="344.0" y2="251.5" stroke="#d5d0c4" stroke-width="1.8"/>
 <line x1="214.0" y1="251.5" x2="214.0" y2="126.5" stroke="#d5d0c4" stroke-width="1.8"/>
 <line x1="214.0" y1="251.5" x2="276.0" y2="203.5" stroke="#d5d0c4" stroke-width="1.8"/>
@@ -32,5 +32,5 @@
 <text x="366.0" y="275.5" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11">001</text>
 <text x="372.0" y="130.5" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11">011</text>
 <text x="186.0" y="122.5" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11">010</text>
-<text x="310" y="318" text-anchor="middle" fill="#c0392b" font-size="12">000 and 010 share an edge of the cube, but they are not consecutive on the path</text>
+<text x="310.0" y="318" text-anchor="middle" fill="#c0392b" font-size="12">000 and 010 share an edge of the cube, but they are not consecutive on the path</text>
 </svg>

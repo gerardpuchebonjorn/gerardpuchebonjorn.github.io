@@ -1,21 +1,21 @@
-<svg viewBox="0 0 420 300" role="img" aria-label="A valid snake of length 2 on the square: 00 to 10 to 11" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#1a1a1a">
-<text x="210" y="28" text-anchor="middle" font-weight="600" font-size="13">a longest snake on the square (length 2)</text>
-<line x1="140" y1="215" x2="280" y2="215" stroke="#d5d0c4" stroke-width="2"/>
-<line x1="280" y1="215" x2="280" y2="75" stroke="#d5d0c4" stroke-width="2"/>
-<line x1="280" y1="75" x2="140" y2="75" stroke="#d5d0c4" stroke-width="2"/>
-<line x1="140" y1="75" x2="140" y2="215" stroke="#d5d0c4" stroke-width="2"/>
-<line x1="140" y1="215" x2="280" y2="215" stroke="#c45c26" stroke-width="3.2" stroke-linecap="round"/>
-<line x1="280" y1="215" x2="280" y2="75" stroke="#c45c26" stroke-width="3.2" stroke-linecap="round"/>
-<circle cx="140" cy="215" r="10" fill="#c45c26" stroke="#c45c26"/>
-<text x="140" y="219" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">0</text>
-<circle cx="280" cy="215" r="10" fill="#c45c26" stroke="#c45c26"/>
-<text x="280" y="219" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">1</text>
-<circle cx="280" cy="75" r="10" fill="#c45c26" stroke="#c45c26"/>
-<text x="280" y="79" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">2</text>
-<circle cx="140" cy="75" r="7" fill="#fff" stroke="#d5d0c4" stroke-width="1.5"/>
-<text x="140" y="247" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">00</text>
-<text x="280" y="247" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">10</text>
-<text x="140" y="57" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">01</text>
-<text x="280" y="57" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">11</text>
-<text x="210" y="280" text-anchor="middle" fill="#6b675e" font-size="12">00 → 10 → 11 · we skip 01 on purpose</text>
+<svg viewBox="0 0 620 300" role="img" aria-label="A valid snake of length 2 on the square: 00 to 10 to 11" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#1a1a1a">
+<text x="310.0" y="28" text-anchor="middle" font-weight="600" font-size="13">a longest snake on the square (length 2)</text>
+<line x1="240.0" y1="215" x2="380.0" y2="215" stroke="#d5d0c4" stroke-width="2"/>
+<line x1="380.0" y1="215" x2="380.0" y2="75" stroke="#d5d0c4" stroke-width="2"/>
+<line x1="380.0" y1="75" x2="240.0" y2="75" stroke="#d5d0c4" stroke-width="2"/>
+<line x1="240.0" y1="75" x2="240.0" y2="215" stroke="#d5d0c4" stroke-width="2"/>
+<line x1="240.0" y1="215" x2="380.0" y2="215" stroke="#c45c26" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="380.0" y1="215" x2="380.0" y2="75" stroke="#c45c26" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="240.0" cy="215" r="10" fill="#c45c26" stroke="#c45c26"/>
+<text x="240.0" y="219" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">0</text>
+<circle cx="380.0" cy="215" r="10" fill="#c45c26" stroke="#c45c26"/>
+<text x="380.0" y="219" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">1</text>
+<circle cx="380.0" cy="75" r="10" fill="#c45c26" stroke="#c45c26"/>
+<text x="380.0" y="79" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">2</text>
+<circle cx="240.0" cy="75" r="7" fill="#fff" stroke="#d5d0c4" stroke-width="1.5"/>
+<text x="240.0" y="247" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">00</text>
+<text x="380.0" y="247" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">10</text>
+<text x="240.0" y="57" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">01</text>
+<text x="380.0" y="57" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12">11</text>
+<text x="310.0" y="280" text-anchor="middle" fill="#6b675e" font-size="12">00 → 10 → 11 · we skip 01 on purpose</text>
 </svg>

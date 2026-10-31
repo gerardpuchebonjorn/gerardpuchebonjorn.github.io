@@ -1,5 +1,5 @@
 <svg viewBox="0 0 620 340" role="img" aria-label="A valid longest snake of length 4 on the 3D cube" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#1a1a1a">
-<text x="310" y="26" text-anchor="middle" font-weight="600" font-size="13">a longest snake on the cube (length 4)</text>
+<text x="310.0" y="26" text-anchor="middle" font-weight="600" font-size="13">a longest snake on the cube (length 4)</text>
 <line x1="214.0" y1="251.5" x2="344.0" y2="251.5" stroke="#d5d0c4" stroke-width="1.8"/>
 <line x1="214.0" y1="251.5" x2="214.0" y2="126.5" stroke="#d5d0c4" stroke-width="1.8"/>
 <line x1="214.0" y1="251.5" x2="276.0" y2="203.5" stroke="#d5d0c4" stroke-width="1.8"/>
@@ -34,5 +34,5 @@
 <text x="372.0" y="130.5" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11">011</text>
 <text x="428.0" y="60.5" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11">111</text>
 <text x="250.0" y="62.5" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11">110</text>
-<text x="310" y="318" text-anchor="middle" fill="#6b675e" font-size="12">000 → 001 → 011 → 111 → 110 · no two non-consecutive corners are adjacent</text>
+<text x="310.0" y="318" text-anchor="middle" fill="#6b675e" font-size="12">000 → 001 → 011 → 111 → 110 · no two non-consecutive corners are adjacent</text>
 </svg>
