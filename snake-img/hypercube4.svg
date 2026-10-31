@@ -1,57 +1,54 @@
-<svg viewBox="0 0 620 268" role="img" aria-label="A 4D hypercube drawn as two cubes linked by edges that flip the fourth bit" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#1a1a1a">
-<defs>
-  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1a1a1a"/></marker>
-</defs>
-<text x="310" y="26" text-anchor="middle" font-weight="600" font-size="13">n = 4 · two cubes, linked corner-to-corner</text>
-<line x1="70" y1="175" x2="98" y2="153" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="70" y1="175" x2="70" y2="120" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="70" y1="175" x2="125" y2="175" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="125" y1="175" x2="153" y2="153" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="125" y1="175" x2="125" y2="120" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="70" y1="120" x2="98" y2="98" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="70" y1="120" x2="125" y2="120" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="125" y1="120" x2="153" y2="98" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="98" y1="153" x2="98" y2="98" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="98" y1="153" x2="153" y2="153" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="153" y1="153" x2="153" y2="98" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="98" y1="98" x2="153" y2="98" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="340" y1="175" x2="368" y2="153" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="340" y1="175" x2="340" y2="120" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="340" y1="175" x2="395" y2="175" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="395" y1="175" x2="423" y2="153" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="395" y1="175" x2="395" y2="120" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="340" y1="120" x2="368" y2="98" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="340" y1="120" x2="395" y2="120" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="395" y1="120" x2="423" y2="98" stroke="#1a1a1a" stroke-width="1.4"/>
-<line x1="368" y1="153" x2="368" y2="98" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="368" y1="153" x2="423" y2="153" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="423" y1="153" x2="423" y2="98" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="368" y1="98" x2="423" y2="98" stroke="#6b675e" stroke-width="1.1"/>
-<line x1="70" y1="175" x2="340" y2="175" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="125" y1="175" x2="395" y2="175" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="70" y1="120" x2="340" y2="120" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="125" y1="120" x2="395" y2="120" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="98" y1="153" x2="368" y2="153" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="153" y1="153" x2="423" y2="153" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="98" y1="98" x2="368" y2="98" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<line x1="153" y1="98" x2="423" y2="98" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.7"/>
-<circle cx="70" cy="175" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="125" cy="175" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="70" cy="120" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="125" cy="120" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="98" cy="153" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="153" cy="153" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="98" cy="98" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="153" cy="98" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="340" cy="175" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="395" cy="175" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="340" cy="120" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="395" cy="120" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="368" cy="153" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="423" cy="153" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="368" cy="98" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<circle cx="423" cy="98" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="130" y="220" text-anchor="middle" fill="#6b675e" font-size="12">starts with 0</text>
-<text x="400" y="220" text-anchor="middle" fill="#6b675e" font-size="12">starts with 1</text>
-<text x="310" y="248" text-anchor="middle" fill="#6b675e" font-size="11.5">blue dashed = flip the new 4th bit · 16 corners, 32 edges</text>
+<svg viewBox="0 0 640 300" role="img" aria-label="A 4D hypercube drawn as two cubes linked by edges that flip the fourth bit" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif" font-size="13" fill="#1a1a1a">
+<text x="320" y="28" text-anchor="middle" font-weight="600" font-size="13">n = 4 · two cubes, linked corner-to-corner</text>
+<line x1="184.0" y1="178.5" x2="232.0" y2="178.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="184.0" y1="178.5" x2="184.0" y2="130.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="184.0" y1="178.5" x2="208.0" y2="159.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="232.0" y1="178.5" x2="232.0" y2="130.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="232.0" y1="178.5" x2="256.0" y2="159.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="184.0" y1="130.5" x2="232.0" y2="130.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="184.0" y1="130.5" x2="208.0" y2="111.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="232.0" y1="130.5" x2="256.0" y2="111.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="208.0" y1="159.5" x2="256.0" y2="159.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="208.0" y1="159.5" x2="208.0" y2="111.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="256.0" y1="159.5" x2="256.0" y2="111.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="208.0" y1="111.5" x2="256.0" y2="111.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="384.0" y1="178.5" x2="432.0" y2="178.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="384.0" y1="178.5" x2="384.0" y2="130.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="384.0" y1="178.5" x2="408.0" y2="159.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="432.0" y1="178.5" x2="432.0" y2="130.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="432.0" y1="178.5" x2="456.0" y2="159.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="384.0" y1="130.5" x2="432.0" y2="130.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="384.0" y1="130.5" x2="408.0" y2="111.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="432.0" y1="130.5" x2="456.0" y2="111.5" stroke="#1a1a1a" stroke-width="1.35"/>
+<line x1="408.0" y1="159.5" x2="456.0" y2="159.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="408.0" y1="159.5" x2="408.0" y2="111.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="456.0" y1="159.5" x2="456.0" y2="111.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="408.0" y1="111.5" x2="456.0" y2="111.5" stroke="#6b675e" stroke-width="1.1"/>
+<line x1="184.0" y1="178.5" x2="384.0" y2="178.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="232.0" y1="178.5" x2="432.0" y2="178.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="184.0" y1="130.5" x2="384.0" y2="130.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="232.0" y1="130.5" x2="432.0" y2="130.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="208.0" y1="159.5" x2="408.0" y2="159.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="256.0" y1="159.5" x2="456.0" y2="159.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="208.0" y1="111.5" x2="408.0" y2="111.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<line x1="256.0" y1="111.5" x2="456.0" y2="111.5" stroke="#2b6cb0" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>
+<circle cx="184.0" cy="178.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="232.0" cy="178.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="184.0" cy="130.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="232.0" cy="130.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="208.0" cy="159.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="256.0" cy="159.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="208.0" cy="111.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="256.0" cy="111.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="384.0" cy="178.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="432.0" cy="178.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="384.0" cy="130.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="432.0" cy="130.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="408.0" cy="159.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="456.0" cy="159.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="408.0" cy="111.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="456.0" cy="111.5" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="220.0" y="250" text-anchor="middle" fill="#6b675e" font-size="12">starts with 0</text>
+<text x="420.0" y="250" text-anchor="middle" fill="#6b675e" font-size="12">starts with 1</text>
+<text x="320" y="278" text-anchor="middle" fill="#6b675e" font-size="11.5">blue dashed = flip the new 4th bit · 16 corners, 32 edges</text>
 </svg>
